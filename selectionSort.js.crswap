@@ -1,0 +1,17 @@
+const livros = require('./listaLivros')
+
+for(let atual = 0; atual < livros.length; atual++)
+function ordenar (lista, propriedade){
+    const resultado = lista.sort((a, b) =>{
+        if(a[propriedade] > b[propriedade]){
+            return -1
+        }
+        if(a[propriedade] < b[propriedade]){
+            return 1
+        }
+        return 0
+    })
+}
+
+ordenar(livros, livros.preco)
+console.log(livros)
